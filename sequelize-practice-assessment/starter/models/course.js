@@ -17,6 +17,10 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: "courseId",
         };
         Course.belongsToMany(models.Person, columnMapping);
+
+        Course.belongsTo(models.Campus, { foreignKey: "campusId" });
+
+        Course.belongsTo(models.department, { foreignKey: "departmentId" });
     };
     return Course;
 };

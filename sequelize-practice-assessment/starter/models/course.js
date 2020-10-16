@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
 
         Course.belongsTo(models.Campus, { foreignKey: "campusId" });
 
-        Course.belongsTo(models.department, { foreignKey: "departmentId" });
+        Course.belongsTo(models.Department, { foreignKey: "departmentId" });
     };
     return Course;
 };

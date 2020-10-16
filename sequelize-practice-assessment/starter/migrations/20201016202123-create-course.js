@@ -19,10 +19,12 @@ module.exports = {
             campusId: {
                 allowNull: false,
                 type: Sequelize.INTEGER,
+                references: { model: "Campuses" },
             },
             departmentId: {
                 allowNull: false,
                 type: Sequelize.INTEGER,
+                references: { model: "Departments" },
             },
             createdAt: {
                 allowNull: false,
